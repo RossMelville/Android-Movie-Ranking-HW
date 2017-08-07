@@ -8,13 +8,13 @@ public class Ranking {
 
     private Movie[] rankings;
 
-    public void Ranking() {
+    public Ranking() {
         this.rankings = new Movie[10] ;
     }
 
     public void addMovie(Movie newMovie) {
         int rank = newMovie.getRanking() - 1;
-        rankings[rank] = (newMovie);
+        rankings[rank] = newMovie;
     }
 
     public String getMovieByRanking(int rank) {
@@ -23,4 +23,19 @@ public class Ranking {
         return foundMovie.getTitle();
     }
 
+    public void replaceLastMovie(Movie newMovie) {
+        newMovie.setRanking(10);
+        rankings[9] = newMovie;
+    }
+
+    public String findMovieByTitle(String title) {
+        for(Movie m : rankings) {
+            if(m.getTitle() == title)
+                return m.toString();
+        }
+        return "Movie not found";
+    }
+
+    public void moveMovieUp(Movie movie) {
+    }
 }

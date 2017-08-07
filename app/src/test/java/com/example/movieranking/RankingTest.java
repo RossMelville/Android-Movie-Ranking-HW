@@ -52,4 +52,50 @@ public class RankingTest {
         ranking.replaceLastMovie(movie11);
         assertEquals("Goodfellas", ranking.getMovieByRanking(10));
     }
+
+    @Test
+    public void canFindMovieByTitle() {
+        ranking.addMovie(movie1);
+        ranking.addMovie(movie2);
+        ranking.addMovie(movie3);
+        ranking.addMovie(movie4);
+        ranking.addMovie(movie5);
+        ranking.addMovie(movie6);
+        ranking.addMovie(movie7);
+        ranking.addMovie(movie8);
+        ranking.addMovie(movie9);
+        ranking.addMovie(movie10);
+        assertEquals("Title: The Godfather, Genre: Crime, Ranking: 1", ranking.findMovieByTitle("The Godfather"));
+    }
+
+    @Test
+    public void cantFindMovieByTitle() {
+        ranking.addMovie(movie1);
+        ranking.addMovie(movie2);
+        ranking.addMovie(movie3);
+        ranking.addMovie(movie4);
+        ranking.addMovie(movie5);
+        ranking.addMovie(movie6);
+        ranking.addMovie(movie7);
+        ranking.addMovie(movie8);
+        ranking.addMovie(movie9);
+        ranking.addMovie(movie10);
+        assertEquals("Movie not found", ranking.findMovieByTitle("The Notebook"));
+    }
+
+    @Test
+    public void canMoveMovieUp(){
+        ranking.addMovie(movie1);
+        ranking.addMovie(movie2);
+        ranking.addMovie(movie3);
+        ranking.addMovie(movie4);
+        ranking.addMovie(movie5);
+        ranking.addMovie(movie6);
+        ranking.addMovie(movie7);
+        ranking.addMovie(movie8);
+        ranking.addMovie(movie9);
+        ranking.addMovie(movie10);
+        ranking.moveMovieUp(movie3);
+        assertEquals("Forrest Gump", ranking.findMovieByPosition(2));
+    }
 }
