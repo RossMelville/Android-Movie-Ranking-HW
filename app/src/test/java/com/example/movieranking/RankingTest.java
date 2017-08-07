@@ -22,7 +22,7 @@ public class RankingTest {
     Movie movie8;
     Movie movie9;
     Movie movie10;
-
+    Movie movie11;
 
     @Before
     public void before() {
@@ -37,11 +37,19 @@ public class RankingTest {
         movie8 = new Movie("Saving Private Ryan", "War", 8);
         movie9 = new Movie("Back to the Future", "Fantasy", 9);
         movie10 = new Movie("Titanic", "Drama", 10);
+        movie11 = new Movie("Goodfellas", "Crime", 11);
     }
 
     @Test
     public void canSetMovieToCorrectPosition() {
         ranking.addMovie(movie2);
         assertEquals("The Shawshank Redemption", ranking.getMovieByRanking(2));
+    }
+
+    @Test
+    public void canReplaceNumberTenMovie() {
+        ranking.addMovie(movie10);
+        ranking.replaceLastMovie(movie11);
+        assertEquals("Goodfellas", ranking.getMovieByRanking(10));
     }
 }
