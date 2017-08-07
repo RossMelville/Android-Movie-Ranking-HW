@@ -24,4 +24,11 @@ public class Movie {
         return this.genre;
     }
 
+    public int getRanking() {
+        return this.ranking;
+    }
+
+    public void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
 }

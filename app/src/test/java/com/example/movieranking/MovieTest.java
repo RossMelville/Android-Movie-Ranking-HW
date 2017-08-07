@@ -28,4 +28,15 @@ public class MovieTest {
         assertEquals("Crime", movie.getGenre());
     }
 
+    @Test
+    public void canGetRanking() {
+        assertEquals(1, movie.getRanking());
+    }
+
+    @Test
+    public void canSetTitle() {
+        movie.setTitle("The Godmother");
+        assertEquals("The Godmother", movie.getTitle());
+    }
+
 }
