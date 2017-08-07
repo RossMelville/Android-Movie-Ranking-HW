@@ -35,4 +35,8 @@ public class Movie {
     public void setGenre(String newGenre) {
         this.genre = newGenre;
     }
+
+    public void setRanking(int newRanking) {
+        this.ranking = newRanking;
+    }
 }

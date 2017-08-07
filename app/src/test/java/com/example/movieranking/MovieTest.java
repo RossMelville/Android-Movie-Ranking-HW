@@ -45,4 +45,10 @@ public class MovieTest {
         assertEquals("Comedy", movie.getGenre());
     }
 
+    @Test
+    public void canSetRanking() {
+        movie.setRanking(5);
+        assertEquals(5, movie.getRanking());
+    }
+
 }
