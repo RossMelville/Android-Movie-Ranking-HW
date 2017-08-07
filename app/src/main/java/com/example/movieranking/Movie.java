@@ -31,4 +31,8 @@ public class Movie {
     public void setTitle(String newTitle) {
         this.title = newTitle;
     }
+
+    public void setGenre(String newGenre) {
+        this.genre = newGenre;
+    }
 }

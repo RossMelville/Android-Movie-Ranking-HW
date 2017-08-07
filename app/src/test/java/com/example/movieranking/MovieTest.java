@@ -39,4 +39,10 @@ public class MovieTest {
         assertEquals("The Godmother", movie.getTitle());
     }
 
+    @Test
+    public void canSetGenre() {
+        movie.setGenre("Comedy");
+        assertEquals("Comedy", movie.getGenre());
+    }
+
 }
