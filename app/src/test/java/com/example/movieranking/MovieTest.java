@@ -51,4 +51,9 @@ public class MovieTest {
         assertEquals(5, movie.getRanking());
     }
 
+    @Test
+    public void canToString() {
+        assertEquals("Title: The Godfather, Genre: Crime, Ranking: 1", movie.toString());
+    }
+
 }

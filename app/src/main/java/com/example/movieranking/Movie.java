@@ -39,4 +39,8 @@ public class Movie {
     public void setRanking(int newRanking) {
         this.ranking = newRanking;
     }
+
+    public String toString() {
+        return "Title: " + this.title + ", Genre: " + this.genre + ", Ranking: " + this.ranking;
+    }
 }
