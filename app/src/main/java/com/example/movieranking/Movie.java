@@ -16,5 +16,12 @@ public class Movie {
         this.ranking = ranking;
     }
 
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getGenre() {
+        return this.genre;
+    }
 
 }

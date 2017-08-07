@@ -19,8 +19,13 @@ public class MovieTest {
     }
 
     @Test
-    public void canReturnTitle() {
-        assertEquals("The GodFather", movie.returnTitle());
+    public void canGetTitle() {
+        assertEquals("The Godfather", movie.getTitle());
+    }
+
+    @Test
+    public void canGetGenre() {
+        assertEquals("Crime", movie.getGenre());
     }
 
 }
