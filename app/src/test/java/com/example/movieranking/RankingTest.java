@@ -96,6 +96,7 @@ public class RankingTest {
         ranking.addMovie(movie9);
         ranking.addMovie(movie10);
         ranking.moveMovieUp(movie3);
-        assertEquals("Forrest Gump", ranking.findMovieByPosition(2));
+        assertEquals("Forrest Gump", ranking.getMovieByRanking(2));
+        assertEquals("The Shawshank Redemption", ranking.getMovieByRanking(3));
     }
 }

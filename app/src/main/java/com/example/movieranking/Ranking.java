@@ -9,7 +9,7 @@ public class Ranking {
     private Movie[] rankings;
 
     public Ranking() {
-        this.rankings = new Movie[10] ;
+        this.rankings = new Movie[10];
     }
 
     public void addMovie(Movie newMovie) {
@@ -29,13 +29,22 @@ public class Ranking {
     }
 
     public String findMovieByTitle(String title) {
-        for(Movie m : rankings) {
-            if(m.getTitle() == title)
+        for (Movie m : rankings) {
+            if (m.getTitle() == title)
                 return m.toString();
         }
         return "Movie not found";
     }
 
-    public void moveMovieUp(Movie movie) {
+    public void moveMovieUp(Movie movieUp) {
+        int rankDown = movieUp.getRanking() - 1;
+        int rankUp = movieUp.getRanking() - 2;
+        Movie movieDown = rankings[rankUp];
+        movieUp.setRanking(rankUp);
+        movieDown.setRanking(rankDown);
+        rankings[rankUp] = movieUp;
+        rankings[rankDown] = movieDown;
     }
+
+
 }
