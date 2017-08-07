@@ -95,8 +95,28 @@ public class RankingTest {
         ranking.addMovie(movie8);
         ranking.addMovie(movie9);
         ranking.addMovie(movie10);
+
         ranking.moveMovieUp(movie3);
         assertEquals("Forrest Gump", ranking.getMovieByRanking(2));
         assertEquals("The Shawshank Redemption", ranking.getMovieByRanking(3));
+    }
+
+    @Test
+    public void canMoveMovieDown() {
+        public void canMoveMovieUp(){
+            ranking.addMovie(movie1);
+            ranking.addMovie(movie2);
+            ranking.addMovie(movie3);
+            ranking.addMovie(movie4);
+            ranking.addMovie(movie5);
+            ranking.addMovie(movie6);
+            ranking.addMovie(movie7);
+            ranking.addMovie(movie8);
+            ranking.addMovie(movie9);
+            ranking.addMovie(movie10);
+
+            ranking.moveMovieDown(movie4);
+            assertEquals("The Dark Knight", ranking.getMovieByRanking(5));
+            assertEquals("Pulp Fiction", ranking.getMovieByRanking(4));
     }
 }
