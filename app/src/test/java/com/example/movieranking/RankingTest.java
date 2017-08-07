@@ -103,7 +103,6 @@ public class RankingTest {
 
     @Test
     public void canMoveMovieDown() {
-        public void canMoveMovieUp(){
             ranking.addMovie(movie1);
             ranking.addMovie(movie2);
             ranking.addMovie(movie3);

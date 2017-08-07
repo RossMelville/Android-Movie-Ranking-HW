@@ -46,7 +46,15 @@ public class Ranking {
         rankings[rankDown] = movieDown;
     }
 
-    
+    public void moveMovieDown(Movie movieDown) {
+        int rankDown = movieDown.getRanking();
+        int rankUp = movieDown.getRanking() - 1;
+        Movie movieUp = rankings[rankDown];
+        movieUp.setRanking(rankUp);
+        movieDown.setRanking(rankDown);
+        rankings[rankUp] = movieUp;
+        rankings[rankDown] = movieDown;
+    }
 
 
 }
